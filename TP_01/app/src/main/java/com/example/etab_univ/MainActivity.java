@@ -27,9 +27,20 @@ public class MainActivity extends AppCompatActivity {
                 EditText adresse = findViewById(R.id.addr);
                 etabUniv.setName(name.getText().toString());
                 etabUniv.setAdress(adresse.getText().toString());
+            }
+        });
+        name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
                 Toast.makeText(MainActivity.this, "le nom est saisi", Toast.LENGTH_SHORT).show();
+            }
+        });
+        adresse.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
                 Toast.makeText(MainActivity.this, "l'adresse est saisi", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }

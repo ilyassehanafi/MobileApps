@@ -1,47 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:stretchColumns="1"
+    android:background="#ffffffff"
+    tools:context="com.example.etab_univ.MainActivity">
 
-    <TableLayout
-        android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.admin.zoommap.MainActivity">
-    <TableRow
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name:" />
+    <TableRow>
+        <TextView android:text="Name:" android:textSize="20dp"
+            />
         <EditText
             android:id="@+id/name"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:background="#ffffff99"
             android:hint="Enter Your Name Here"/>
     </TableRow>
-    <TableRow
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+    <TableRow>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        android:text="Address:" />
+        android:text="Address:"
+        android:textSize="20dp"
+            />
         <EditText
             android:hint="Enter Your Adress Here"
             android:id="@+id/addr"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:background="#ffffff99" />
     </TableRow>
      <TableRow>
-         <TextView android:text="Type:" android:textSize="20sp"> </TextView>
+         <TextView android:text="Type:" android:textSize="20dp"> </TextView>
          <RadioGroup android:id="@+id/types" >
              <RadioButton
                  android:id="@+id/ingenieurie"
@@ -67,13 +56,12 @@
         android:layout_height="wrap_content"
         android:text="Save"/>
 
-        <ImageView
+    <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/pic"></ImageView>
+            android:src="@drawable/pic">
+    </ImageView>
 </TableLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
